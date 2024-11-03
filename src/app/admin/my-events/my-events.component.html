@@ -1,0 +1,20 @@
+<div id="main">
+    <div id="title">
+        <img src="thumb-150-365144.jpg">
+        <p>
+            Mis eventos
+        </p>
+    </div>
+    <div id="myEvents">
+        <app-my-event *ngFor="let game of data" [game]="game" (emitData)="updateStatusEvent($event)" (emitData)="updateStateEventFinal($event)" class="myEvent"/>
+    </div>
+    <div id="subTitle">
+        <img src="GameBoy.png"> 
+        <p>
+            Eventos donde participo
+        </p>
+    </div>
+    <div id="eventsParticipant">
+        <app-card-event-i *ngFor="let gameI of eventsI" [eventI]="gameI" class="myEvent" />
+    </div>
+</div>

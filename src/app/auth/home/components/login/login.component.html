@@ -1,0 +1,30 @@
+<div id="main">
+    <form [formGroup]="myFormLogin" (ngSubmit)="login()">
+        <div id="image">
+            <img src="FondoForm.png">
+        </div>
+        <div id="form">
+            <div id="title">
+                <p>Sign Up</p>
+            </div>
+            <div id="Fields">
+                <div class="field">
+                    <label>Usuario </label>
+                    <input class="input-data" placeholder="Nombre de usuario" formControlName="name">
+                </div>
+                <div class="field">
+                    <label>Email: </label>
+                    <input class="input-data" placeholder="Email" type="email" formControlName="email">
+                </div>
+                <div class="field">
+                    <label>Password: </label>
+                    <input class="input-data" placeholder="password" type="password" formControlName="password">
+                </div>
+                <div id="eventButton">
+                    <button>Logar</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

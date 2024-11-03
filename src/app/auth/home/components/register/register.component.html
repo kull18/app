@@ -1,0 +1,36 @@
+<div id="main">
+    <form [formGroup]="myForm" (ngSubmit)="register()">
+        <div id="form">
+            <div id="title">
+                <p>Register</p>
+            </div>
+            <div id="Fields">
+                <div class="field">
+                    <label>Usuario </label>
+                    <input class="input-data" placeholder="Nombre de usuario" formControlName="name">
+                </div>
+                <div class="field">
+                    <label>Email: </label>
+                    <input class="input-data" placeholder="Email" type="email" formControlName="email">
+                </div>
+                <div class="field">
+                    <label>Password: </label>
+                    <input class="input-data" placeholder="password" type="password" formControlName="password">
+                </div>
+                <div class="field">
+                    <label>¿Organizador o usuario?</label>
+                    <select formControlName="id_role" [value]="optionSelected">
+                        <option *ngFor="let opcion of options" [value]="opcion">{{ opcion }}</option>
+                        {{optionSelected}}
+                      </select>
+                </div>
+                <div id="eventButton">
+                    <button>Logar</button>
+                </div>
+            </div>
+        </div>
+        <div id="image">
+            <img src="vecteezy_3d-virtual-reality-icon_12421758.png">
+        </div>
+    </form>
+</div>

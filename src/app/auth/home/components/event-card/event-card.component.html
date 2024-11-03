@@ -1,0 +1,30 @@
+<div id="image">
+    <img src={{gameUrl}}>
+</div>
+<div id="event">
+    <div id="infoContainer">
+        <div class="info">
+            <p>{{event.event.name}}</p>
+        </div>
+        <div class="info">
+            <p>Nombre: {{event.event.game}}</p>
+        </div>
+        <div class="info">
+            <p>Tipo: {{event.event.type_game}}</p>
+        </div>
+
+    </div>
+    <div id="addEvent">
+        <div id="buttonContainer">
+            <button (click)="addEvent()">
+                Ingresar
+            </button>
+        </div>
+        <div class="infoAmount">
+            <p *ngIf="event.event.amount === event.participantCount" style="color: red;">Participantes:
+                {{event.participantCount}}/{{event.event.amount}}</p>
+            <p *ngIf="event.participantCount < event.event.amount" style="color: green;">Participantes:
+                {{event.participantCount}}/{{event.event.amount}}</p>
+        </div>
+    </div>
+</div>

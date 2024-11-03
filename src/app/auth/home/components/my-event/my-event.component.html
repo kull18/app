@@ -1,0 +1,33 @@
+<div id="image">
+    <img src={{gameUrl}}>
+</div>
+<div id="infoContainer">
+    <div id="info">
+        <div class="sectionInfo">
+            <p >
+                {{game.name}}
+            </p>
+        </div>
+        <div class="sectionInfo">
+            <p>
+                {{game.game}}
+            </p>
+        </div>
+        <div class="sectionInfo">
+            <p>
+                {{game.status}}
+            </p>
+        </div>
+    </div>
+    <div id="changeEvent">
+        <button *ngIf="this.game.status === 'espera'" (click)="emitaDataStatus()"> 
+            Cambiar estatus del evento
+        </button>
+        <button (click)="emitActionStatus()" *ngIf="this.game.status === 'accion'" >
+            Cambiar
+        </button>
+        <p *ngIf="this.game.status === 'finalizado'">
+            Evento terminado
+        </p>
+    </div>
+</div>

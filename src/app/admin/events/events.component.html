@@ -1,0 +1,29 @@
+<div id="main">
+    <app-header-user/>
+    <div id="events">
+        <form [formGroup]="myForm">
+            <ul>
+                <li>
+                    <label>Nombre del juego</label>
+                    <input formControlName="game" (input)="findByName()" (blur)="blurEventInput()">
+                </li>
+                <li>
+                    <label>Tipo de juego: </label>
+                    <input formControlName="type_game" (input)="findByTypeGame()" (blur)="blurEventInputType()">
+                </li>
+
+            </ul>
+            <ul id="myEventsContainer">
+                <li id="myEvents">
+                    <a [routerLink]='[route]'>
+                        <p>Mis eventos</p>
+                    </a>
+
+                </li>
+            </ul>
+        </form>
+        <div id="eventsCards">
+            <app-event-card class="card" *ngFor="let event of this.data" [event]="event" (dataEmit)="getEmitData($event)"/>
+        </div>
+    </div>
+</div>

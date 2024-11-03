@@ -1,0 +1,27 @@
+<div id="image">
+    <img src={{url}}>
+</div>
+<div id="infoContainer">
+    <div id="info">
+        <div class="sectionInfo">
+            <p >
+                {{eventI.name}}
+            </p>
+        </div>
+        <div class="sectionInfo">
+            <p>
+                {{eventI.game}}
+            </p>
+        </div>
+        <div class="sectionInfo">
+            <p>
+                {{eventI.status}}
+            </p>
+        </div>
+    </div>
+    <div id="changeEvent">
+        <button (click)="deleteEventI()">
+            Cancelar ingreso
+        </button>
+    </div>
+</div>

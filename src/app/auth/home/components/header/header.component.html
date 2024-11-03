@@ -1,0 +1,43 @@
+<header>
+    <div id="image">
+        <img src="IconHome.jpg" [routerLink]="['/']">
+    </div>
+    <div id="options">
+        <ul>
+            <li id="event" *ngIf="id_role === 1">
+                <a [routerLink]="['/admin/event']">
+                    Generar evento
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/info']">
+                    ¿Qué somos?
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/admin/events']">
+                    Eventos
+                </a>
+            </li>
+            <li *ngIf="isLoged" id="eventLogOut">
+                <a (click)="LogOut()">
+                    LogOut
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="signIn">
+        <ul>
+            <li id="signIn">
+                <a href="/Register">
+                    Register
+                </a>
+            </li>
+            <li id="logIn">
+                <a href="/login">
+                    Log In
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
